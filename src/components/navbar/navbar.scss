@@ -1,4 +1,16 @@
 .nav{
   display: flex;
   align-items: center;
+  margin-bottom: 80px;
+}
+.logo{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 33px;  
+  color: #000000;
+}
+.error{
+  margin-bottom: 70px;
 }

@@ -1,13 +1,29 @@
 import Home from "./pages/home/home";
-import menuData from "./components/data/data";
+
+import "./assets/scss/main.scss";
+import { Route, Routes } from "react-router-dom";
+import Blog from "./pages/blog/blog";
+import Error from "./pages/error/error";
+import TodosProvider from "./contexts/contexts";
 
 
-function App() {
+const App = () => {
+ 
+
+
   return (
     <>
-      <Home  menuData={menuData} />
+      <TodosProvider >
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog/:id" element={<Blog />} />
+            <Route path="/error/:id" element={<Error />} />
+          </Routes>
+      </TodosProvider>
     </>
   );
-}
+};
 
 export default App;
+
+

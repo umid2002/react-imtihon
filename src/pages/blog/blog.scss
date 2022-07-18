@@ -1,0 +1,73 @@
+@import "../../assets/scss/variables.scss";
+
+
+.section-blog{
+  max-width: 736px;
+  margin: auto;
+}
+
+.blog-img{
+  margin-bottom: 50px;
+}
+.blog-body, .info-subtitle{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $grey;
+  margin-bottom: 25px;
+}
+.info-title{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: $space-grey;
+  margin-bottom: 35px;
+} 
+.info-subtitle{
+  margin-bottom: 32px;
+}
+
+.info-about{
+  padding-left: 22px;
+  border-left: 1px solid #DFDFDF;
+  margin-bottom: 48px;
+}
+.info-description, .info-author{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $space-grey;
+  margin-bottom: 35px;
+}
+.elit-link{
+  color: blue;
+}
+.info-author{
+  margin-bottom: 0;
+}
+.lesson-title{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  color: $space-grey;
+  margin-bottom: 39px;
+}
+.lesson-item{
+  list-style: circle;
+  padding-left: 17px;
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $space-grey;
+  margin-bottom: 30px;
+}

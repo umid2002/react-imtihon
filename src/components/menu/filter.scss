@@ -1,0 +1,18 @@
+.nav-list{
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+.nav-list__item{
+  margin-left: 30px;
+}
+li{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+a{
+  color: #3D3D3D;
+}

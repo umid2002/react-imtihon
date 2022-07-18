@@ -1,0 +1,58 @@
+
+@import "../../assets/scss/variables.scss";
+
+.product-item{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #DFDFDF;
+  margin-bottom: 46px;
+}
+.product-item__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.date{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey;
+}
+.sort{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: $grey;
+}
+.title{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: $space-grey;
+  margin-bottom: 22px;
+  width: 544px;
+  text-transform: capitalize;
+}
+.time{
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey;
+  margin-bottom: 17px;
+}
+.blog-product{
+  max-width: 736px;
+  margin: auto;
+  border-bottom: 0;
+  margin-bottom: 45px;
+}

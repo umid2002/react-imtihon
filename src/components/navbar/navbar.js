@@ -1,13 +1,16 @@
-import Menu from "../menu/menu";
+import { useContext } from "react";
+import { TodosContext } from "../../contexts/contexts";
+import Filter from "../menu/filter";
 import Search from "../search/search";
 import "./navbar.scss"
 
 
-const Navbar = ({ menuData }) => {
+const Navbar = () => {
+  const {menu} = useContext(TodosContext)
   return (
     <div className="nav">
       <div className="logo">BoburBlog</div>
-      <Menu menuData={menuData} />
+      <Filter menuData={menu} />
       <Search />
     </div>
   );
