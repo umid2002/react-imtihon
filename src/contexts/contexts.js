@@ -7,7 +7,10 @@ export const TodosContext = createContext();
 
 const TodosProvider = ({ children }) => {
   const [users, setUsers] = useState(null);
+  const [filteredUsers, setFilteredUsers] = useState();
   const [menu, setMenu] = useState(menuData);
+  const [paginatedAlbums, setpaginatedAlbums] = useState();
+  const [activePageNumber, setactivePageNumber] = useState(2);
   // const [isloading, setLoading] = useState(true);
   // const randomTypeSort = [ "Design theory", "Typograhp", "User Interface", "UX", "Design tools", "Figma", "Color theory" ].random(type => {return type})
   useEffect(() => {
@@ -27,18 +30,40 @@ const TodosProvider = ({ children }) => {
           };
         });
         setUsers(newDate);
+        setFilteredUsers(newDate);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [setUsers]);
 
+  useEffect(() => {
+    if (filteredUsers) {
+      setpaginatedAlbums(
+        filteredUsers.slice((activePageNumber - 1) * 10, activePageNumber * 10)
+      );
+    }
+  }, [filteredUsers, activePageNumber]);
+
   // if (isloading) {
   //   return <LoadingSpinner />;
   // }
 
   return (
-    <TodosContext.Provider value={{ users, setUsers, menu, setMenu }}>
+    <TodosContext.Provider
+      value={{
+        users,
+        setUsers,
+        menu,
+        setMenu,
+        filteredUsers,
+        setFilteredUsers,
+        paginatedAlbums,
+        setpaginatedAlbums,
+        activePageNumber,
+        setactivePageNumber,
+      }}
+    >
       {children}
     </TodosContext.Provider>
   );

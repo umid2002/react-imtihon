@@ -4,11 +4,11 @@ import ProductItem from "../../components/product-item/product-item";
 
 
 const Product = () => {
-  const {users} = useContext(TodosContext);
+  const {paginatedAlbums} = useContext(TodosContext);
   return (
     <>
       {
-        users?.map( (data) => (
+        paginatedAlbums?.map( (data) => (
           <ProductItem key={data.id} data={data} />
         ) )
       }

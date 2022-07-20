@@ -5,6 +5,7 @@ import Product from "../../components/products/products";
 import Footer from "../../components/footer/footer";
 
 import "./home.scss";
+import Pagination from "../../components/pagination/pagination";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
           </div>
         </Container>
       </section>
+      <Pagination />
       <Footer />
     </>
   );
