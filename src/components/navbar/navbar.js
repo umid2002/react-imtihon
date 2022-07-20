@@ -6,10 +6,16 @@ import "./navbar.scss"
 
 
 const Navbar = () => {
-  const {menu} = useContext(TodosContext)
+  
+  const {menu} = useContext(TodosContext);
   return (
     <div className="nav">
       <div className="logo">BoburBlog</div>
+      <div className="hamburger">
+        <span className="hamburger-item"></span>
+        <span className="hamburger-item"></span>
+        <span className="hamburger-item"></span>
+      </div>
       <Filter menuData={menu} />
       <Search />
     </div>

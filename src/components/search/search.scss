@@ -24,3 +24,13 @@
   background: #FFBA9D;
   border-radius: 3px;
 }
+
+
+// Mediaquery start
+
+@media (max-width: 991.98px){
+  .search{
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}

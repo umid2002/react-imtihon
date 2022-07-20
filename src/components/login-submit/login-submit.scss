@@ -1,0 +1,39 @@
+
+.login-submit{
+  background: #000000;
+  border-radius: 3px;
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  padding: 11px;
+}
+
+
+
+
+
+
+
+
+// @mediaQuery Start 
+
+@media(max-width: 419.98px){
+  .login-submit{
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 320px){
+  .login-submit{
+    max-width: 300px;
+  }
+}
+.login-submit:disabled{
+  background-color: rgb(64, 64, 64);
+
+}

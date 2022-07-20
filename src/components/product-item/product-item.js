@@ -3,15 +3,7 @@ import "./product-item.scss"
 import { Link } from "react-router-dom";
 
 const ProductItem = ({ data, className }) => {
-  const newData = {
-    ...data,
-    date: 'September 24.2020',
-    sort: "Design Theory",
-    time: "3 minustes read",
-    like: 112,
-    comment: 70
-  }
-  const { id, title, date, sort, time } = newData;
+  const { id, title, date, sort, time } = data;
   return (
     <>
       <div className={"product-item " +  className}>

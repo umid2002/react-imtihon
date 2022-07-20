@@ -1,26 +1,34 @@
-import Container from "../../components/container/container"
+import Container from "../../components/container/container";
 import Navbar from "../../components/navbar/navbar";
 import Social from "../../components/social/social";
 import Product from "../../components/products/products";
+import Footer from "../../components/footer/footer";
 
-import "./home.scss"
+import "./home.scss";
 
 const Home = () => {
-
-
   return (
-    <Container>
-      <Navbar />
+    <>
+      <header className="home-header">
+        <Container>
+          <Navbar />
+        </Container>
+      </header>
       <section className="home-section">
-        <div className="home-left">
-          <Social />
-        </div>
-        <div className="home-right">
-          <p className="home-right__title">Recent Posts</p>
-          <Product />
-        </div>
+        <Container>
+          <div className="home-todo">
+            <div className="home-left">
+              <Social />
+            </div>
+            <div className="home-right">
+              <p className="home-right__title">Recent Posts</p>
+              <Product />
+            </div>
+          </div>
+        </Container>
       </section>
-    </Container>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 export default Home;

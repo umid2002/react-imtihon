@@ -6,6 +6,9 @@ import "./filter.scss";
 
 const Filter = () => {
   const {menu} = useContext(TodosContext)
+  if(menu === []){
+    return ''
+  }
 
   return (
     <ul className="nav-list">

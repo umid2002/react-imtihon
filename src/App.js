@@ -9,15 +9,13 @@ import TodosProvider from "./contexts/contexts";
 
 const App = () => {
  
-
-
   return (
     <>
       <TodosProvider >
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog/:id" element={<Blog />} />
-            <Route path="/error/:id" element={<Error />} />
+            <Route path="*" element={<Error />} />
           </Routes>
       </TodosProvider>
     </>

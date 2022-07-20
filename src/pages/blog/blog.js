@@ -4,17 +4,32 @@ import Navbar from "../../components/navbar/navbar";
 import ProductItem from "../../components/product-item/product-item";
 import "./blog.scss";
 import blog from "../../assets/img/blog.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { TodosContext } from "../../contexts/contexts";
+import Footer from "../../components/footer/footer";
+import {AiOutlineLike} from "react-icons/ai"
+import {AiOutlineShareAlt} from "react-icons/ai"
 
 const Blog = () => {
   const { id } = useParams();
-  const { users } = useContext(TodosContext)
+  const { users } = useContext(TodosContext);
 
-  
-  const dataItem = users.find((data) => {
+
+  const dataItem = users?.find((data) => {
     return data.id === +id;
   });
+  const data = dataItem;
+
+  const [like, setLike] = useState(data.like)
+  const [share, setShare] = useState(data.share)
+
+
+  const handleLikeAdd = () => {
+    return setLike(like + 1)
+  }
+  const handleShareAdd = () => {
+    return setShare(share + 1)
+  }
 
 
   return (
@@ -22,10 +37,17 @@ const Blog = () => {
       <header className="blog">
         <Container>
           <Navbar />
-          <section className="section section-blog">
-            <ProductItem className="blog-product" />
+        </Container>
+      </header>
+      <section className="section-blog">
+        <Container>
+          <div className="blog-center">
+            <ProductItem className="blog-product" data={data} />
+            <span onClick={handleLikeAdd} className="like"> <AiOutlineLike size="1.5rem" /> {like}</span>
+            <span onClick={handleShareAdd} className="share"> <AiOutlineShareAlt size="1.5rem" />{share}</span>
             <img className="blog-img" src={blog} alt="Blog Img" />
-            <p className="blog-body">{dataItem.body}</p>
+            <p className="blog-body">{data.body}</p>
+            {/* rander numbers */}
             <div className="info">
               <h2 className="info-title">Info overload</h2>
               <p className="info-subtitle">
@@ -61,9 +83,49 @@ const Blog = () => {
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
+          <div className="more-like">
+            <h3 className="more-like__title">More like this</h3>
+            <div className="more-like__product-item">
+              <div className="product-item">
+                <div className="product-item__top">
+                  <p className="date">September 24. 2020</p>
+                  <p className="sort">Figma</p>
+                </div>
+                <Link to={"#"}>
+                  <h2 className="more-title">How to choose the right colors when creating a website?</h2>
+                </Link>
+                <span className="time">3 minute read</span>
+              </div>
+            </div>
+            <div className=" more-like__product-item">
+              <div className="product-item">
+                <div className="product-item__top">
+                  <p className="date">September 24. 2020</p>
+                  <p className="sort">Figma</p>
+                </div>
+                <Link to={"#"}>
+                  <h2 className="more-title">How to choose the right colors when creating a website?</h2>
+                </Link>
+                <span className="time">3 minute read</span>
+              </div>
+            </div>
+            <div className=" more-like__product-item">
+              <div className="product-item">
+                <div className="product-item__top">
+                  <p className="date">September 24. 2020</p>
+                  <p className="sort">Figma</p>
+                </div>
+                <Link to={"#"}>
+                  <h2 className="more-title">How to choose the right colors when creating a website?</h2>
+                </Link>
+                <span className="time">3 minute read</span>
+              </div>
+            </div>
+          </div>
         </Container>
-      </header>
+      </section>
+      <Footer />
     </>
   );
 };

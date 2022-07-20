@@ -1,8 +1,36 @@
 
-.container{
-  width: 1280px;
-  box-sizing: border-box;
-  margin:  26px auto 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+@media (min-width: 319.98px){
+  .container{
+    padding: 0 calc(50vw - 150px);
+  }
+}
+
+@media (min-width: 419.98px){
+  .container{
+    padding: 0 calc(50vw - 220px);
+  }
+}
+
+@media (min-width: 575.98px){
+  .container {
+    padding: 0 calc(50vw - 270px);
+  }
+}
+
+@media (min-width: 767.98px){
+  .container {
+    padding: 0 calc(50vw - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .container {
+    padding: 0 calc(50vw - 480px);
+  }
+}
+
+@media (min-width: 1199.98px){
+  .container {
+    padding: 0 calc(50vw - 590px);
+  }
 }
