@@ -72,8 +72,8 @@ const Login = () => {
               <InputPassword passwordRef={passwordRef} />
               <LoginSubmit loading={loading}  />
               <span className="error">{error}</span>
-              <p>eve.holt@reqres.in</p>
-              <p>cityslicka</p>
+              <p>Login: eve.holt@reqres.in</p>
+              <p>Password: cityslicka</p>
             </form>
           </div>
         </Container>
