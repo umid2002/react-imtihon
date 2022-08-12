@@ -1,7 +1,7 @@
 
 
 .pagination{
-  margin-left: 465px;
+  margin-left: 290px;
   display: flex;
   margin-bottom: 100px;
 }
@@ -12,4 +12,23 @@ border: 2px solid rgb(117, 117, 117);
 margin-left: 15px;
 border-radius: 5px;
 padding: 5px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .pagination{
+    margin: auto;
+    padding: 0 calc(50vw - 360px);;
+  }
+  .pagination-button{
+    margin-left: 0;
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 419.98px) {
+  .pagination{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }

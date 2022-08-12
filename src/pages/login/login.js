@@ -10,42 +10,49 @@ import "./login.scss";
 
 const Login = () => {
   const { setToken } = useContext(AuthContext);
+
+  // Navigate for Home Page
+  const navigate = useNavigate();
+  // Error
+  const [error, setError] = useState(""); // Boshlangich qiymat berish shart...
+  // Loading
+  const [loading, setLoading] = useState(false)
+
   // take form inputs values
   const emailRef = useRef();
   const passwordRef = useRef();
-
-  const navigate = useNavigate();
-
-  const [error, setError] = useState();
-
-  const [loading, setLoading] = useState(false)
-
-
   // Form submit
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
+    // Take input value
     const emailValue = emailRef.current.value;
     const passwordValue = passwordRef.current.value;
 
+    // Agar ikklasi ham true qaytarsa manashu function ishlasin.
     if (emailValue && passwordValue) {
-      setLoading(true)
+      // setLoading(true)
       fetch("https://reqres.in/api/login", {
-        method: "POST",
-        body: JSON.stringify({
+        method: "POST", // Agar GET bo`ladigan bo`lsa method yozish shart emas. POST qilganimiz uchun yozyabmiz ya`ni backendga ma`lumot yuboryabmiz. Agar ma`lumot to`g`ri bo`ladigan bo`lsa access beriladi bo`lmasa error qaytadi.
+        body: JSON.stringify({ // Ma`lumotni yuborish jarayoni ya`ni inputni qiymatini yuborish.
           "email": emailValue,
           "password": passwordValue,
         }),
-        headers: {
+        headers: { // ??????????????
           "Content-Type": "application/json" 
         }
       })
-        .then((res) => res.json())
-        .then((data) => 
-        {setToken(data.token)
-        navigate("/")}
+        .then((res) => {
+          if(res.ok){
+            return res.json()
+          }
+        }) // Ma`lumot kelgandan keyin json formatga o`girsin.
+        .then((data) => {
+          setToken(data.token); // useState`dagi tokenni fetchdan keladigan tokenga o`zgartish. Kirish huquqini beradigan shifrlanga kod.
+          navigate("/")
+      }
         )
-        .catch(e => setError(e))
-        .finally(() => setLoading(false))
+        .catch(e => setError(e.message)) // Agar ma`lumot kelmay qolsa errorni olish.
+        .finally(() => setLoading(false)) // Tugallangandan keyin buttonni disablatini false qilish.
     }
   };
 
@@ -63,7 +70,7 @@ const Login = () => {
               <h2 className="login-title">Login</h2>
               <InputLogin emailRef={emailRef} />
               <InputPassword passwordRef={passwordRef} />
-              <LoginSubmit loading={loading} />
+              <LoginSubmit loading={loading}  />
               <span className="error">{error}</span>
               <p>eve.holt@reqres.in</p>
               <p>cityslicka</p>

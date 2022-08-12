@@ -1,0 +1,1 @@
+export const jobs = ["Design", "Theory", "Typography", "UX", "UI"];

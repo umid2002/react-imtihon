@@ -13,15 +13,14 @@ import {AiOutlineShareAlt} from "react-icons/ai"
 const Blog = () => {
   const { id } = useParams();
   const { users } = useContext(TodosContext);
-
-
+  
   const dataItem = users?.find((data) => {
-    return data.id === +id;
+    return data?.id === +id;
   });
   const data = dataItem;
 
-  const [like, setLike] = useState(data.like)
-  const [share, setShare] = useState(data.share)
+  const [like, setLike] = useState(data?.like)
+  const [share, setShare] = useState(data?.share)
 
 
   const handleLikeAdd = () => {
@@ -46,7 +45,7 @@ const Blog = () => {
             <span onClick={handleLikeAdd} className="like"> <AiOutlineLike size="1.5rem" /> {like}</span>
             <span onClick={handleShareAdd} className="share"> <AiOutlineShareAlt size="1.5rem" />{share}</span>
             <img className="blog-img" src={blog} alt="Blog Img" />
-            <p className="blog-body">{data.body}</p>
+            <p className="blog-body">{data?.body}</p>
             {/* rander numbers */}
             <div className="info">
               <h2 className="info-title">Info overload</h2>
@@ -131,3 +130,4 @@ const Blog = () => {
 };
 
 export default Blog;
+

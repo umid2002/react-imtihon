@@ -28,7 +28,11 @@ const Home = () => {
           </div>
         </Container>
       </section>
-      <Pagination />
+      <section className="paginate">
+        <Container>
+          <Pagination />
+        </Container>
+      </section>
       <Footer />
     </>
   );

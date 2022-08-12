@@ -3,14 +3,13 @@ import { TodosContext } from "../../contexts/contexts";
 import "./pagination.scss"
 
 const Pagination = () =>{
-  const {filteredUsers,setactivePageNumber} = useContext(TodosContext);
+  const {filteredUsers, setactivePageNumber} = useContext(TodosContext);
 
   if(!filteredUsers){
     return null
   }
 
   const pagesCount = Math.ceil(filteredUsers.length / 10)
-  console.log(pagesCount);
 
   const handlePaginationClick = (evt) => {
     if(evt.target.matches("button")){

@@ -16,6 +16,11 @@ ul{
   list-style: none;
 }
 
+li:hover{
+  cursor: pointer;
+  color: rgb(182, 182, 182);
+}
+
 img{
   display: block;
 }

@@ -11,12 +11,10 @@ const Search = () => {
   const handleFilterSubmit = (evt) => {
     evt.preventDefault()  
     const inputValue = inputRef.current.value;
-
-      const filteredUsers = users.filter((data) => data.title.includes(inputValue))
-      setFilteredUsers(filteredUsers)
-
-  }
-  return (  
+    const filteredUsers = users.filter((data) => data.title.includes(inputValue.toLowerCase()))
+      setFilteredUsers(filteredUsers);
+  };
+  return (
     <>
       <form onSubmit={handleFilterSubmit}  method="get" className="search" action="#">
         <input ref={inputRef} placeholder="Search" className="search-input" type="text" />
