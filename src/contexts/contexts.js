@@ -47,7 +47,7 @@ const TodosProvider = ( props ) => {
         const newDate = data?.map((album) => {
           return {
             ...album, // Massiv ichidagi har bitta Objectni sochib yuborish.
-            sort: jobs[getRndInteger(0, 7)],
+            sort: jobs[getRndInteger(0, 5)],
             time: "3 minustes read",
             date: new Date(`${getRndInteger(2001, 2022)}-${getRndInteger(1, 12)}-${getRndInteger(1, 28)}`).toString(),
             like: getRndInteger(0, 100),
