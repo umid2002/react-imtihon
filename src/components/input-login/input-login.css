@@ -1,0 +1,25 @@
+.input-login {
+  background: #F4F4F4;
+  border-radius: 3px;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #474747;
+  padding: 12px 14px;
+  border: none;
+  width: 350px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 419.98px) {
+  .input-login {
+    max-width: 320px;
+  }
+}
+@media (max-width: 320px) {
+  .input-login {
+    max-width: 300px;
+  }
+}/*# sourceMappingURL=input-login.css.map */

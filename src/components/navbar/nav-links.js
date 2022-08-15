@@ -10,13 +10,14 @@ const NavLinks = ({link}) => {
   }
   return (
       <li className="nav-list__item">
-        <label>
+        <label htmlFor="sort">
           {link.name}
           <input name="sort" onChange={handleRadioChange} id={link.name} className="visually-hidden" type="radio" />
         </label>
       </li>
-    
   );
 }
 
 export default NavLinks;
+
+

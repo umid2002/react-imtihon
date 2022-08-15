@@ -1,0 +1,30 @@
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: #F4F4F4;
+  border-radius: 3px;
+  border: none;
+  width: 242px;
+  padding: 12px 14px;
+  color: #474747;
+  font-family: "Roboto Mono";
+  font-weight: 300;
+}
+
+.search-submit {
+  padding: 11px;
+  border: none;
+  background: #FFBA9D;
+  border-radius: 3px;
+}
+
+@media (max-width: 991.98px) {
+  .search {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=search.css.map */

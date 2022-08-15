@@ -1,0 +1,38 @@
+.error-img {
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.error-title {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #474747;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-subtitle {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: auto;
+  color: #474747;
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+.home-link {
+  display: block;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #474747;
+}/*# sourceMappingURL=error.css.map */

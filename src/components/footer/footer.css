@@ -1,0 +1,104 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0 45px 0;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo__img {
+  border-radius: 30px;
+}
+
+.footer-logo__title {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  margin-left: 15px;
+}
+
+.footer-social, .footer-buy, .footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  margin-left: 350px;
+}
+
+.footer-social__title, .footer-buy__title {
+  margin-bottom: 14px;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.footer-buy {
+  margin-left: 110px;
+}
+
+.footer-contact {
+  margin-left: auto;
+}
+
+.footer-social__span, .footer-buy__span, .footer-contact__span {
+  margin-bottom: 15px;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+@media (max-width: 1199.98px) {
+  .footer-menu {
+    align-items: flex-start;
+  }
+  .footer-social {
+    margin-left: 260px;
+  }
+  .footer-menu span {
+    font-size: 14px;
+  }
+  .footer-menu h3 {
+    font-size: 16px;
+  }
+  .footer-logo__title {
+    font-size: 22px;
+  }
+  .footer-logo__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer-social {
+    margin-left: auto;
+  }
+  .footer-buy {
+    margin-left: auto;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer-logo, .footer-social, .footer-buy, .footer-contact {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}/*# sourceMappingURL=footer.css.map */
