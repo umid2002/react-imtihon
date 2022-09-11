@@ -1,17 +1,21 @@
-import { useState } from "react";
-import Hamburger from "hamburger-react";
 import NavbarFilter from "./navbar-links-rander";
+import { useContext } from "react";
+import { TodosContext } from "../../contexts/contexts";
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const MobileNavigation = () => {
-  const [ open, setOpen ] = useState(false);
-  
+  const {open, setOpen} = useContext(TodosContext);
+  document.addEventListener("scroll", ()=>{
+    if(open){
+      setOpen(false)
+    }
+  })
+
   return (
     <>
       <div className="hamburger">
-        <Hamburger 
-          direction="right"
-          size={20}
-          onToggle={() => {
+        <GiHamburgerMenu
+          onClick={() => {
             if(open){
               setOpen(false);
             }else{

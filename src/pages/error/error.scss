@@ -38,3 +38,16 @@
   text-align: center;
   color: $space-grey;
 }
+
+
+
+// media start
+
+@media screen and (max-width: 767px) {
+  .error-img,
+  .error-subtitle,
+  .error-title{
+    width: 80%;
+    margin: auto auto 25px auto;
+  }
+}

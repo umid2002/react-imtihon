@@ -3,8 +3,13 @@ import { TodosContext } from "../../contexts/contexts";
 
 const NavLinks = ({link}) => {
   const {setFilteredUsers, users} = useContext(TodosContext);
+  const {open, setOpen} = useContext(TodosContext);
+
   const handleRadioChange = (evt) =>{
     const inputType = evt.target.id;
+    if(open){
+      setOpen(false)
+    }
     console.log(inputType);
     const filterByType = users.filter((item) => item.sort === inputType)
     inputType === "All" ? setFilteredUsers(users) : setFilteredUsers(filterByType)

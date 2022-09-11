@@ -1,16 +1,16 @@
 @import "../../assets/scss/variables.scss";
 
-
-.blog-center{
+.blog-center {
   max-width: 736px;
   margin: auto;
 }
 
-.blog-img{
+.blog-img {
   margin-bottom: 50px;
 }
-.blog-body, .info-subtitle{
-  font-family: 'Roboto Mono';
+.blog-body,
+.info-subtitle {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -18,26 +18,27 @@
   color: $grey;
   margin-bottom: 25px;
 }
-.info-title{
-  font-family: 'Roboto Mono';
+.info-title {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
   color: $space-grey;
   margin-bottom: 35px;
-} 
-.info-subtitle{
+}
+.info-subtitle {
   margin-bottom: 32px;
 }
 
-.info-about{
+.info-about {
   padding-left: 22px;
-  border-left: 1px solid #DFDFDF;
+  border-left: 1px solid #dfdfdf;
   margin-bottom: 48px;
 }
-.info-description, .info-author{
-  font-family: 'Roboto Mono';
+.info-description,
+.info-author {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -45,14 +46,14 @@
   color: $space-grey;
   margin-bottom: 35px;
 }
-.elit-link{
+.elit-link {
   color: blue;
 }
-.info-author{
+.info-author {
   margin-bottom: 0;
 }
-.lesson-title{
-  font-family: 'Roboto Mono';
+.lesson-title {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
   font-size: 19px;
@@ -60,10 +61,10 @@
   color: $space-grey;
   margin-bottom: 39px;
 }
-.lesson-item{
+.lesson-item {
   list-style: circle;
   padding-left: 17px;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -72,18 +73,16 @@
   margin-bottom: 30px;
 }
 
-
 // product Item scss code
-
 
 @import "../../assets/scss/variables.scss";
 
-.more-like{
+.more-like {
   width: 736px;
   margin: auto;
   overflow-x: hidden;
 }
-.more-like__product-item{
+.more-like__product-item {
   border-bottom: none;
   display: flex;
   flex-direction: column;
@@ -91,22 +90,22 @@
   max-width: 736px;
 }
 
-.product-item__top{
+.product-item__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-.date{
-  font-family: 'Roboto Mono';
+.date {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: $grey;
 }
-.sort{
-  font-family: 'Roboto Mono';
+.sort {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -114,8 +113,8 @@
   text-align: right;
   color: $grey;
 }
-.more-title{
-  font-family: 'Roboto Mono';
+.more-title {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -125,8 +124,8 @@
   width: 544px;
   text-transform: capitalize;
 }
-.time{
-  font-family: 'Roboto Mono';
+.time {
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -134,15 +133,15 @@
   color: $grey;
   margin-bottom: 17px;
 }
-.blog-product{
+.blog-product {
   max-width: 736px;
   border-bottom: 0;
   margin-bottom: 45px;
 }
 
-.more-like__title{
+.more-like__title {
   margin-bottom: 40px;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -150,92 +149,94 @@
   color: black;
 }
 
-.like, .share{
+.like,
+.share {
   position: absolute;
-  top: 150px;
-  left: 260px;
+  
+  top: -55%;
+  left: -20%;
   display: flex;
-  flex-direction: column; 
-  font-family: 'Roboto Mono';
+  flex-direction: column;
+  font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   color: #000000;
-} 
-.share{
-  top: 220px;
 }
-.like:hover, .share:hover{
+.share {
+  top: 75%;
+}
+.like:hover,
+.share:hover {
   cursor: pointer;
 }
+
 // Mediaquery Start
 
- @media (max-width: 767.98px){
-  .blog-img{
-    width: 540px;
-  }
- }
-
- @media (max-width: 576.98px){
-  .blog-img{
-    width: 440px;
-  }
- }
-
- @media (max-width: 420px){
-  .blog-img{
-    width: 300px;
-  }
- }
-
- @media (max-width: 991.98px){
-  .more-title{
+@media (max-width: 991.98px) {
+  .more-title {
     width: auto;
   }
-
 }
-@media (max-width: 767.98px){
-  .more-like__product-item{
+
+@media (max-width: 767.98px) {
+  .blog-img {
+    width: 540px;
+  }
+  .more-like__product-item {
     width: 570px;
   }
-  .more-like{
+  .more-like {
     width: 570px;
   }
-  .more-title{
+  .more-title {
     width: 400px;
   }
 }
 
-@media (max-width: 600px){
-  .more-like__product-item{
+@media (max-width: 600px) {
+  .more-like__product-item {
     width: 450px;
   }
-  .more-like{
+  .more-like {
     width: 450px;
   }
-  .more-title{
+  .more-title {
     width: 350px;
   }
 }
-@media (max-width: 490px){
-  .more-like__product-item{
+
+@media (max-width: 576.98px) {
+  .blog-img {
+    width: 440px;
+  }
+}
+
+@media (max-width: 490px) {
+  .more-like__product-item {
     width: 380px;
   }
-  .more-like{
+  .more-like {
     width: 380px;
   }
-  .more-title{
+  .more-title {
     width: 300px;
   }
 }
 
-@media (max-width: 450px){
-  .more-like__product-item{
+@media (max-width: 450px) {
+  .more-like__product-item {
     width: 280px;
   }
-  .more-like{
+  .more-like {
     width: 280px;
+  }
+}
+
+@media (max-width: 420px) {
+  .blog-img {
+    width: 300px;
   }
 }

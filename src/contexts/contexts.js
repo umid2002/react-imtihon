@@ -38,7 +38,8 @@ const TodosProvider = ( props ) => {
   const [activePageNumber, setactivePageNumber] = useState(1);
   const [isloading, setLoading] = useState(true);
   const [navLinks, setNavlinks] = useState(navLinksData);
-  
+  const [open, setOpen] = useState(false)
+
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
@@ -87,6 +88,8 @@ const TodosProvider = ( props ) => {
         setactivePageNumber,
         navLinks,
         setNavlinks,
+        open,
+        setOpen
       }} {...props}
     >
     </TodosContext.Provider>
